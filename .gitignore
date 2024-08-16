@@ -1,0 +1,8 @@
+## generic files to ignore
+error_log
+_notes
+*.DS_Store
+.idea
+*~
+node_modules/
+vendor/
