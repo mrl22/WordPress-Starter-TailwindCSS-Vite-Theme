@@ -1,0 +1,26 @@
+{
+  "src/theme.css": {
+    "file": "assets/theme-08a3b041.css",
+    "src": "src/theme.css"
+  },
+  "src/theme.js": {
+    "css": [
+      "assets/theme-08a3b041.css"
+    ],
+    "file": "assets/theme-01727808.js",
+    "isEntry": true,
+    "src": "src/theme.js"
+  },
+  "src/wp-login/login.css": {
+    "file": "assets/login-449bafe2.css",
+    "src": "src/wp-login/login.css"
+  },
+  "src/wp-login/login.js": {
+    "css": [
+      "assets/login-449bafe2.css"
+    ],
+    "file": "assets/login-aefebf37.js",
+    "isEntry": true,
+    "src": "src/wp-login/login.js"
+  }
+}

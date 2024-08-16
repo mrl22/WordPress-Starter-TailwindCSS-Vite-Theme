@@ -1,0 +1,72 @@
+
+:root {
+  --mobile-menu-width: 90; // vw
+  --mobile-menu-speed: 300ms;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --mobile-menu-width: 80; // vw
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --mobile-menu-width: 70; // vw
+  }
+}
+@media (min-width: 1024px) {
+  #page #mobile-menu-container, body::before {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  body {
+    overflow-x: hidden;
+  }
+  #page {
+    transform: translateX(0);
+    transition: transform var(--mobile-menu-speed) ease;
+
+    &::before {
+      opacity: 0;
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: #000; /* Dark overlay with 50% opacity */
+      z-index: 999; /* Ensure it's above other elements */
+      transition: opacity var(--mobile-menu-speed) ease;
+    }
+
+    #mobile-menu-container {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: calc(var(--mobile-menu-width) * 1vw);
+      height: 100%;
+      background: white;
+      z-index: 1000;
+      transform: translateX(calc(var(--mobile-menu-width) * 1vw));
+    }
+
+    &.mobile-menu-open {
+      transform: translateX(calc(var(--mobile-menu-width) * -1vw));
+      transition: transform var(--mobile-menu-speed) ease;
+
+      &::before {
+        opacity: 0.7;
+      }
+
+      #mobile-menu-container {
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+      }
+
+    }
+
+  }
+}
+

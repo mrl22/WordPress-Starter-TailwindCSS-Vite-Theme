@@ -1,0 +1,1 @@
+# I used https://realfavicongenerator.net/ to generate these favicons
