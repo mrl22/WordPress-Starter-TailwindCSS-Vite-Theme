@@ -4,7 +4,7 @@ WordPress Starter TailwindCSS Vite Theme
 Clean and lightweight starter theme based on TailwindCSS, AlpineJS, Vite, SCSS, Turbo and incorporates loads of 
 functions ready to be turned on and off in the functions.php and inc/ directory.
 
-This theme strips WordPress back, removes all the bloat and leaves you with a clean tarting point, a favicon, a single 
+This theme strips WordPress back, removes all the bloat and leaves you with a clean starting point, a favicon, a single 
 css and js resource. **Just Four** requests in total.
 
 Some features within this theme may not be laid out the way you like to work, but feel free to customise it. I developed 
