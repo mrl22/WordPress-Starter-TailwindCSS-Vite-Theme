@@ -1,25 +1,13 @@
 <?php
 
-// Create your first Gutenberg block
-// https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
-//
-// cd blocks
-// npx @wordpress/create-block hello-world
+/* `Restore Classic Editor in the admin (replaces Gutenberg)
+----------------------------------------------------------------------------------------------------*/
 
-$blocks_dir = get_template_directory() . '/blocks';
+add_filter('use_block_editor_for_post', '__return_false', 10);
 
-if (is_dir($blocks_dir)) {
-    $dirs = scandir($blocks_dir);
+/* `Restore Classic Widgets in the admin (replaces Widget blocks)
+----------------------------------------------------------------------------------------------------*/
 
-    foreach ($dirs as $dir) {
-        if ($dir === '.' || $dir === '..') {
-            continue;
-        }
-        $dir_path = $blocks_dir . '/' . $dir;
-        $file_path = $dir_path . '/' . $dir . '.php';
-
-        if (is_dir($dir_path) && file_exists($file_path)) {
-            require $file_path;
-        }
-    }
-}
+add_action('after_setup_theme', function () {
+    remove_theme_support('widgets-block-editor');
+});
