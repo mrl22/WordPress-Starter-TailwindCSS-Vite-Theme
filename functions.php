@@ -21,6 +21,7 @@ require 'inc/login.php';
 require 'inc/nav_walker.php';
 require 'inc/post-types.php';
 require 'inc/shortcodes.php';
+require 'inc/svg.php';
 require 'inc/updates.php';
 require 'inc/useful.php';
 require 'inc/widgets.php';
