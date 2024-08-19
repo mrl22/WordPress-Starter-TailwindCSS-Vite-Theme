@@ -59,8 +59,8 @@
                         'container_class' => 'hidden bg-gray-100 lg:bg-transparent lg:block',
                         'menu_class'      => 'lg:flex lg:-mx-4',
                         'theme_location'  => 'main-menu',
-                        'li_class'        => 'px-4 py-2',
                         'fallback_cb'     => false,
+                        'walker'          => new Walker_Nav_Menu_Tailwind(),
                     )
                 );
                 ?>
