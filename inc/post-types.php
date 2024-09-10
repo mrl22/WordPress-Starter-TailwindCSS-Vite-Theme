@@ -1,5 +1,8 @@
 <?php
 
+//WordPress permalinks should be flushed when you register a post type or taxonomy.
+//flush_rewrite_rules();
+
 /* `Create custom post type
 ----------------------------------------------------------------------------------------------------*/
 
